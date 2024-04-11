@@ -390,6 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 341239715}
   - component: {fileID: 341239716}
+  - component: {fileID: 341239717}
   m_Layer: 5
   m_Name: Trigger
   m_TagString: Untagged
@@ -428,9 +429,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f06527c939e2f4db6ecb0e16ec8cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &341239717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341239714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef09acf67b77d94489d914e7fefb3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pdPatch: {fileID: 1723811714}
   button: {fileID: 1723811710}
-  delay: 1
 --- !u!1 &347293822
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347293823}
   - component: {fileID: 347293825}
+  - component: {fileID: 347293826}
   m_Layer: 5
   m_Name: Trigger
   m_TagString: Untagged
@@ -477,6 +490,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 142900e011cd2da47af41f2dd30c9f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &347293826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347293822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef09acf67b77d94489d914e7fefb3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pdPatch: {fileID: 1392165742}
@@ -1212,6 +1237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerialController
       objectReference: {fileID: 0}
+    - target: {fileID: 128384, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 405068, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1272,6 +1301,7 @@ GameObject:
   - component: {fileID: 775975311}
   - component: {fileID: 775975313}
   - component: {fileID: 775975312}
+  - component: {fileID: 775975314}
   m_Layer: 5
   m_Name: Trigger
   m_TagString: Untagged
@@ -1310,8 +1340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142900e011cd2da47af41f2dd30c9f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pdPatch: {fileID: 544080324}
-  button: {fileID: 544080322}
 --- !u!114 &775975313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,9 +1352,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f06527c939e2f4db6ecb0e16ec8cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &775975314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775975310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef09acf67b77d94489d914e7fefb3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pdPatch: {fileID: 544080324}
   button: {fileID: 544080322}
-  delay: 1
 --- !u!1 &833702059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,6 +2693,7 @@ GameObject:
   - component: {fileID: 1780101618}
   - component: {fileID: 1780101620}
   - component: {fileID: 1780101619}
+  - component: {fileID: 1780101621}
   m_Layer: 5
   m_Name: Trigger
   m_TagString: Untagged
@@ -2692,8 +2732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142900e011cd2da47af41f2dd30c9f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pdPatch: {fileID: 1757204049}
-  button: {fileID: 1757204047}
 --- !u!114 &1780101620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2706,9 +2744,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f06527c939e2f4db6ecb0e16ec8cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1780101621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780101617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef09acf67b77d94489d914e7fefb3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   pdPatch: {fileID: 1757204049}
   button: {fileID: 1757204047}
-  delay: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
