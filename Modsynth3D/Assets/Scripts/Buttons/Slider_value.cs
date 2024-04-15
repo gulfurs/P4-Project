@@ -12,7 +12,7 @@ public class Slider2Float : MonoBehaviour
     {
         // Get the value of the UI slider
         float sliderValue = slider.value;
-
+        //Debug.Log(sliderValue);
         // Send the slider value to the PD patch.
         // We can then use the SendFloat() function to send our float value to
         // that named receive object.
