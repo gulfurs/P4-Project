@@ -396,9 +396,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1198607663}
-  - {fileID: 1259043497}
+  m_Children: []
   m_Father: {fileID: 2073551080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3466,6 +3464,8 @@ RectTransform:
   - {fileID: 1472318800}
   - {fileID: 1366807256}
   - {fileID: 2145383409}
+  - {fileID: 613685894}
+  - {fileID: 1575447399}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 2145383410}
   - component: {fileID: 2145383411}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Knob_Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3622,4 +3622,3 @@ SceneRoots:
   - {fileID: 392376974}
   - {fileID: 2073551080}
   - {fileID: 780663155}
-  - {fileID: 733059874}
