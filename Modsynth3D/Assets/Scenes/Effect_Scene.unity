@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1936,6 +1936,7 @@ GameObject:
   - component: {fileID: 1468012095}
   - component: {fileID: 1468012097}
   - component: {fileID: 1468012096}
+  - component: {fileID: 1468012098}
   m_Layer: 5
   m_Name: Trigger
   m_TagString: Untagged
@@ -1983,7 +1984,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468012094}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8f06527c939e2f4db6ecb0e16ec8cd1, type: 3}
   m_Name: 
@@ -1991,6 +1992,21 @@ MonoBehaviour:
   pdPatch: {fileID: 1575447402}
   button: {fileID: 1575447400}
   delay: 1
+--- !u!114 &1468012098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468012094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142900e011cd2da47af41f2dd30c9f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1472318801}
+  pdPatch: {fileID: 1575447402}
+  button: {fileID: 1575447400}
 --- !u!1 &1472318799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,7 +2368,6 @@ GameObject:
   - component: {fileID: 1575447400}
   - component: {fileID: 1575447403}
   - component: {fileID: 1575447402}
-  - component: {fileID: 1575447405}
   m_Layer: 5
   m_Name: TestTrigger
   m_TagString: Untagged
@@ -2613,29 +2628,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575447398}
   m_CullTransparentMesh: 1
---- !u!164 &1575447405
-AudioReverbFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575447398}
-  m_Enabled: 0
-  m_DryLevel: 0
-  m_Room: 0
-  m_RoomHF: 0
-  m_DecayTime: 1
-  m_DecayHFRatio: 0.5
-  m_ReflectionsLevel: -10000
-  m_ReverbLevel: 0
-  m_ReverbDelay: 0.04
-  m_Diffusion: 100
-  m_Density: 100
-  m_HFReference: 5000
-  m_RoomLF: 0
-  m_LFReference: 250
-  m_ReflectionsDelay: 0
-  m_ReverbPreset: 27
 --- !u!1 &1587025090
 GameObject:
   m_ObjectHideFlags: 0

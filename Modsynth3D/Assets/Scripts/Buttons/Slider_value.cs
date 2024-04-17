@@ -8,14 +8,29 @@ public class Slider2Float : MonoBehaviour
     // Reference to the UI slider
     public Slider slider;
 
-    void Update()
+    private float previousSliderValue;
+
+    void Start()
     {
-        // Get the value of the UI slider
-        float sliderValue = slider.value;
-        //Debug.Log(sliderValue);
-        // Send the slider value to the PD patch.
-        // We can then use the SendFloat() function to send our float value to
-        // that named receive object.
-        pdPatch.SendFloat("sliderValue", sliderValue);
+        // Initialize previousSliderValue with the initial value of the slider
+        previousSliderValue = slider.value;
+        // Add listener for value change event
+        slider.onValueChanged.AddListener(OnSliderValueChanged);
     }
+
+    void OnSliderValueChanged(float newValue)
+    {
+        // Check if the new value is different from the previous one
+        if (newValue != previousSliderValue)
+        {
+            // Update the previousSliderValue
+            previousSliderValue = newValue;
+            // Send the new slider value to the PD patch
+            pdPatch.SendFloat("sliderValue", newValue);
+
+            
+        }
+    }
+
+    // Remove the Update method as it's no longer needed for sending slider values
 }
