@@ -13,6 +13,9 @@ public class AudioMan_buttons : MonoBehaviour
         audioSource = FindObjectsOfType<AudioSource>();
         volumeSlider.onValueChanged.AddListener(VolumeChange);
 
+        Debug.Log("Value produced: " + 1);
+    
+
     }
     public void Pause(){
 
