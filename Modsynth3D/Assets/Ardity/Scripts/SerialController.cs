@@ -43,6 +43,7 @@ public class SerialController : MonoBehaviour
              "New messages will be discarded.")]
     public int maxUnreadMessages = 1;
 
+    public GameObject objectToEnableDisable;
     // Constants used to mark the start and end of a connection. There is no
     // way you can generate clashing messages from your serial device, as I
     // compare the references of these strings, no their contents. So if you
@@ -143,6 +144,15 @@ public class SerialController : MonoBehaviour
     public void SendSerialMessage(string message)
     {
         serialThread.SendMessage(message);
+    }
+
+    void OnConnectionEvent(bool isConnected)
+    {
+        if (objectToEnableDisable != null)
+        {
+            // Enable or disable the GameObject based on the connection status
+            objectToEnableDisable.SetActive(isConnected);
+        }
     }
 
     // ------------------------------------------------------------------------

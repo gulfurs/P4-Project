@@ -18,6 +18,7 @@ public class StereoKnob : MonoBehaviour
         slider.onValueChanged.AddListener(delegate { UpdateText(); });
 
         UpdateText();
+
     }
 
     void UpdateText()

@@ -16,6 +16,7 @@ using System.Collections;
  */
 public class SampleMessageListener : MonoBehaviour
 {
+    public GameObject objectToEnableDisable;
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {
@@ -29,7 +30,17 @@ public class SampleMessageListener : MonoBehaviour
     {
         if (success)
             Debug.Log("Connection established");
+            if (objectToEnableDisable != null)
+        {
+            // Enable or disable the GameObject based on the connection status
+            objectToEnableDisable.SetActive(success);
+        }
         else
             Debug.Log("Connection attempt failed or disconnection detected");
+            if (objectToEnableDisable != null)
+        {
+            // Enable or disable the GameObject based on the connection status
+            objectToEnableDisable.SetActive(success);
+        }
     }
 }
