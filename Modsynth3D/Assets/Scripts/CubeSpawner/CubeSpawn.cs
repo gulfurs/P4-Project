@@ -55,10 +55,15 @@ public class CubeSpawn : MonoBehaviour{
         // Ensure the value is within the range of the array
         int index = Mathf.Clamp(integerValue - 1, 0, cubeCombinations.Length - 1);
 
-        // Loop through all cube combinations and activate the one at the specified index
+        // Loop through all cube combinations
         for (int i = 0; i < cubeCombinations.Length; i++)
         {
-            cubeCombinations[i].SetActive(i == index);
+            // Get the cube combination at the current index
+            GameObject combination = cubeCombinations[i];
+
+            // Activate the combination if it's the current index, otherwise deactivate it
+            bool isActive = i == index;
+            SetCubeCombinationActive(combination, isActive);
         }
     }
 
@@ -66,5 +71,28 @@ public class CubeSpawn : MonoBehaviour{
         int.TryParse(texty.text, out integerValue);
 
         SpawnCube();
+    }
+
+    // Method to activate/deactivate a cube combination
+    void SetCubeCombinationActive(GameObject combination, bool isActive)
+    {
+        // Get all MeshRenderers and AudioSources
+        MeshRenderer[] renderers = combination.GetComponentsInChildren<MeshRenderer>(true);
+        AudioSource[] audioSources = combination.GetComponentsInChildren<AudioSource>(true);
+
+        // Enable/disable MeshRenderers
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.enabled = isActive;
+        }
+
+        // Set volume of AudioSources
+        foreach (AudioSource audioSource in audioSources)
+        {
+            if (isActive)
+                audioSource.volume = 1f; // Volume 1
+            else
+                audioSource.volume = 0f; // Volume 0
+        }
     }
 }
