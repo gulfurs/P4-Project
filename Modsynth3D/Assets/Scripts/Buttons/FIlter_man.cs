@@ -5,19 +5,23 @@ using UnityEngine.UI;
 
 public class FIlter_man : MonoBehaviour
 {
-    public AudioLowPassFilter lowPassFilter;
     public AudioHighPassFilter highPassFilter;
-    //public AudioBandPassFilter bandPassFilter;
+    public AudioLowPassFilter lowPassFilter;
 
-    public Slider lowPassSlider;
     public Slider highPassSlider;
-    public Slider bandPassSlider;
+    public Slider lowPassSlider;
+
+    public GameObject audioSourceObject;
 
     void Update()
     {
         // Update filter parameters based on slider values
-        lowPassFilter.cutoffFrequency = lowPassSlider.value;
         highPassFilter.cutoffFrequency = highPassSlider.value;
-       // bandPassFilter.centerFrequency = bandPassSlider.value;
+        lowPassFilter.cutoffFrequency = lowPassSlider.value;
+    }
+
+    public void ApplyFilters()
+    {
+        audioSourceObject.GetComponent<AudioSource>().Play();
     }
 }
