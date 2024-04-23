@@ -7,7 +7,7 @@ public class Clicker : MonoBehaviour
 {
 
     public GameObject canvasMain;
-    public GameObject canvasDrum;
+    public GameObject canvasOther;
 
 
     void OnMouseOver()
@@ -18,7 +18,7 @@ public class Clicker : MonoBehaviour
             // Whatever you want it to do.
             Debug.Log("Wow");
             canvasMain.SetActive(false);
-            canvasDrum.SetActive(true);
+            canvasOther.SetActive(true);
         }
     }
 
