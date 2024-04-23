@@ -20,8 +20,7 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
-using UnityEngine;
-using System.Collections;
+
 
 // An implementation of the state variable filter (SVF)
 //
@@ -30,15 +29,18 @@ using System.Collections;
 //
 // http://courses.cs.washington.edu/courses/cse490s/11au/Readings/Digital_Sound_Generation_2.pdf
 
+using UnityEngine;
+using System.Collections;
+
 namespace Reaktion {
 
 [AddComponentMenu("Reaktion/Utility/Band Pass Filter")]
 public class BandPassFilter : MonoBehaviour
 {
-    [Range(0.0f, 1.0f)]
+    [Range(20.0f, 10000.0f)]
     public float cutoff = 0.5f;
     
-    [Range(1.0f, 10.0f)]
+    [Range(0.1f, 10.0f)]
     public float q = 1.0f;
 
     // DSP variables
@@ -50,7 +52,7 @@ public class BandPassFilter : MonoBehaviour
 
     // Cutoff frequency in Hz
     public float CutoffFrequency {
-        get { return Mathf.Pow(2, 10 * cutoff - 10) * 15000; }
+         get { return Mathf.Pow(2, 10 * cutoff - 10) * 15000; }
     }
 
     void Awake()
