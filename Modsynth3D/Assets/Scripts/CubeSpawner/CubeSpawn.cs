@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class CubeSpawn : MonoBehaviour{
 
     public int integerValue = 0;
-    public Text texty;
+    public TextMeshProUGUI texty;
 
     public GameObject[] cubeCombinations;
     
-    public GameObject DrumCube; 
-    public GameObject InstrumentCube; 
-    public GameObject EffectCube;
-  
     public void SpawnCube(){
         /*
         if (integerValue == 1){
