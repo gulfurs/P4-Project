@@ -13,7 +13,8 @@ public class DropDown : MonoBehaviour
 
     // Add more scripts as needed
 
-    private ChangeReverb reverbChanger;
+
+    public ChangeReverb reverbChanger;
 
     void Start()
     {
@@ -37,14 +38,24 @@ public class DropDown : MonoBehaviour
             case 0:
                 // Execute ScriptA
                 reverbChanger.SetReverbCave();
+                reverbChanger.SetReverbUser();
+                Debug.Log("Cave");
                 break;
             case 1:
                 // Execute ScriptB
                 reverbChanger.SetReverbHallway();
+                reverbChanger.SetReverbUser();
+
+
+                Debug.Log("Hallway");
+
                 break;
                 // Add more cases for additional options
             case 2:
                 reverbChanger.SetReverbForest();
+                reverbChanger.SetReverbUser();
+
+                Debug.Log("Forest");
                 break;
         }
     }
