@@ -3,7 +3,12 @@ guid: d51a22037434d414688aad547e57ab6b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PianoUV
+    second: {fileID: 2100000, guid: e9fa897b30279494599c9b4bc0be1068, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

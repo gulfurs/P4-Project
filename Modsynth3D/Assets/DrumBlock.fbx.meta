@@ -3,7 +3,12 @@ guid: 0081b9993cd18b542bc8b34dd3d9d4fa
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DrumMat
+    second: {fileID: 2100000, guid: f420589e1ff4f31479891c245341f9f0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

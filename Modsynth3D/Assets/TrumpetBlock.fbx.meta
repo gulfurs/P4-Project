@@ -3,7 +3,12 @@ guid: ab4d6f765c24409469818ab0baaca853
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrumpetUV
+    second: {fileID: 2100000, guid: b0bd6f6bc6fccf14e81ae7efa153b80a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
