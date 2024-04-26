@@ -12,43 +12,6 @@ public class CubeSpawn : MonoBehaviour{
     public GameObject[] cubeCombinations;
     
     public void SpawnCube(){
-        /*
-        if (integerValue == 1){
-
-            Instantiate(DrumCube, transform.position, Quaternion.identity);
-        }
-
-        else if (integerValue == 2){
-
-            Instantiate(InstrumentCube, transform.position, Quaternion.identity);
-        }
-         else if (integerValue == 3){
-
-            Instantiate(EffectCube, transform.position, Quaternion.identity);
-        } */
-        /*
-        switch(integerValue) {
-        case 1:
-        DrumCube.SetActive(true);
-        InstrumentCube.SetActive(false);
-        EffectCube.SetActive(false);
-        break;
-        case 2:
-        DrumCube.SetActive(false);
-        InstrumentCube.SetActive(true);
-        EffectCube.SetActive(false);
-        break;
-        case 3:
-        DrumCube.SetActive(false);
-        InstrumentCube.SetActive(false);
-        EffectCube.SetActive(true);
-        break;
-        default:
-        DrumCube.SetActive(false);
-        InstrumentCube.SetActive(false);
-        EffectCube.SetActive(false);
-        break; 
-        } */
         // Ensure the value is within the range of the array
         int index = Mathf.Clamp(integerValue - 1, 0, cubeCombinations.Length - 1);
 
@@ -76,11 +39,18 @@ public class CubeSpawn : MonoBehaviour{
         // Get all MeshRenderers and AudioSources
         MeshRenderer[] renderers = combination.GetComponentsInChildren<MeshRenderer>(true);
         AudioSource[] audioSources = combination.GetComponentsInChildren<AudioSource>(true);
+        BoxCollider[] colliders = combination.GetComponentsInChildren<BoxCollider>(true);
 
         // Enable/disable MeshRenderers
         foreach (MeshRenderer renderer in renderers)
         {
             renderer.enabled = isActive;
+        }
+
+         // Enable/disable Colliders
+        foreach (BoxCollider collider in colliders)
+        {
+            collider.enabled = isActive;
         }
 
         // Set volume of AudioSources
