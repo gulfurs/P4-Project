@@ -6,6 +6,8 @@ Ayo my guys! This project is prevailing in awesomesauceness so tune in sirsky an
 
 BlockBand is a unique fusion of physical and digital music creation, bringing together Unity and Arduino to create a musical experience like no other. With BlockBand, you can compose, mix, and play music using physical blocks in the real world and a Unity-based digital audio workstation.
 
+_This project was developed as part of the "MED4 Project - Interactive sound systems (MED4) KBH" 🎓 course at AAU Copenhagen 🏫.
+
 <h2 align="center">Features 🚀</h2>
 
 - **Physical Blocks:** Use physical blocks connected to Arduino to control various aspects of your music in Unity.
@@ -38,7 +40,5 @@ Once you have everything set up, you can start using BlockBand to create your ow
 - **Compose:** Arrange the blocks in different configurations to compose melodies, beats, and rhythms.
 - **Mix:** Use the blocks to control volume, effects, and other parameters to fine-tune your sound.
 - **Play:** Have fun experimenting with different combinations and interactions to produce unique musical expressions.
-
-- _This project was developed as part of the "MED4 Project - Interactive sound systems (MED4) KBH" 🎓 course at AAU Copenhagen 🏫.
 
 🎶 Happy music making with BlockBand! 🎶
