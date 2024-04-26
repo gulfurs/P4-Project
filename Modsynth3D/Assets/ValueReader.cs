@@ -60,7 +60,19 @@ public class ValueReader : MonoBehaviour
         }
         else if (value >= 205 && value <= 225)
         {
+            return 2;
+        }
+        else if (value >= 125 && value <= 140)
+        {
             return 5;
+        } 
+        else if (value >= 170 && value <= 180)
+        {
+            return 6;
+        } 
+        else if (value >= 153 && value <= 160)
+        {
+            return 7;
         }
         else
         {
