@@ -8,8 +8,7 @@ public class UI_button_only_on : MonoBehaviour
     public Slider slider;
     public LibPdInstance pdPatch;
 
-
-    // Reference to the button UI component
+    //Reference to the button UI component
     public Button button;
 
     void Start()
@@ -23,7 +22,6 @@ public class UI_button_only_on : MonoBehaviour
     {
         float sliderValue = slider.value;
         pdPatch.SendFloat("sliderValue", sliderValue);
-        // Send a bang to the PD patch when the button is clicked
         pdPatch.SendBang("triggerOn");
     }
 }
