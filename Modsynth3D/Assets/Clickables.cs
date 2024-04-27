@@ -1,26 +1,22 @@
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public interface IClickable
+{
+    void OnLeftClick();
+    void OnRightClick();
+}
 
 public class Clickables : MonoBehaviour {
-    public Camera cam;
-    public GameObject canvasMain;
-    public GameObject canvasOther;
+    private Camera cam;
         
-    // Called when the object is Left clicked
-    public virtual void OnLeftClick()
-    {
-        //Virtue
+    public virtual void Start() {
+        cam = Camera.main;
     }
-
-    // Called when the object is Right clicked
-    public virtual void OnRightClick()
-    {
-        //Virtue
-    }
-
+    
     // Update is called once per frame
-    void Update()   
+    public virtual void Update()   
     {   
         Ray originMouse = cam.ScreenPointToRay(Input.mousePosition);
             
@@ -30,33 +26,42 @@ public class Clickables : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
+            RaycastHit[] hits = Physics.RaycastAll(originMouse);
                 
-            if (Physics.Raycast(originMouse, out hit))
+            foreach (RaycastHit hit in hits)
             {
+                GameObject hitObject = hit.collider.gameObject;
                 //Check if ray hits clicker
-                Clicker clickable = hit.collider.GetComponent<Clicker>();
+                Clicker clickable = hitObject.GetComponent<Clicker>();
                 //Checks if it's clicker
+
+                IClickable clicky = hitObject.GetComponent<IClickable>();
+
                 if (clickable != null)
                 {
-                    Debug.Log("Object clicked: " + hit.collider.gameObject.name);
-                    OnLeftClick();
-                }
-            }
-
-            if (Input.GetMouseButtonDown(1))
-            {
-                if (Physics.Raycast(originMouse, out hit))
-                {
-                    //Check if ray hits clicker
-                    Clicker clickable = hit.collider.GetComponent<Clicker>();
-                    //Checks if it's clicker
-                    if (clickable != null)
-                    {
-                        OnRightClick();
-                    }
+                    Debug.Log("Object Left clicked: " + hit.collider.gameObject.name);
+                    clicky.OnLeftClick();
                 }
             }
         }
+
+        if (Input.GetMouseButtonDown(1))
+            {
+                RaycastHit[] hits = Physics.RaycastAll(originMouse);
+
+                foreach (RaycastHit hit in hits)
+                {
+                    GameObject hitObject = hit.collider.gameObject;
+                    //Check if ray hits clicker
+                    Clicker clickable = hit.collider.GetComponent<Clicker>();
+                    //Checks if it's clicker
+                    IClickable clicky = hitObject.GetComponent<IClickable>();
+                    if (clickable != null)
+                    {
+                        Debug.Log("Object Right clicked: " + hit.collider.gameObject.name);
+                        clicky.OnRightClick();
+                    }
+                }
+            }
     }
 }
