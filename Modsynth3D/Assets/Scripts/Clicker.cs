@@ -11,6 +11,8 @@ public class Clicker : MonoBehaviour, IClickable
 
     private GameObject interfaceInstance; 
 
+    //private ChangeAudio changeAudio;
+
     void Start () {
         BlockManager blockManager = FindObjectOfType<BlockManager>();
         GameObject interfaceCanvas = GameObject.Find("InterfaceCanvas");
@@ -22,6 +24,15 @@ public class Clicker : MonoBehaviour, IClickable
         {
         blockSounds.Insert(0, audioSource.clip);
         }*/
+
+        // GameObject changeAudioObject = GameObject.Find("Snare");
+
+        //  if (changeAudioObject != null)
+        // {
+        //     changeAudio = changeAudioObject.GetComponent<ChangeAudio>();
+        //     blockSounds.Add(changeAudio.audioClip);
+        // }
+
 
     if (interfaceCanvas != null) {
        switch (blockType)
@@ -54,6 +65,7 @@ public class Clicker : MonoBehaviour, IClickable
             interfaceInstance.SetActive(true); 
         }
     }
+
 
     public void OnRightClick()
     {
@@ -90,3 +102,34 @@ public class Clicker : MonoBehaviour, IClickable
 
 
 }
+
+
+//     public void SetDrumHiHat()
+//     {
+
+//         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+//         audioSource.clip = blockSounds[0];
+//         audioSource.Play();
+
+//     }
+
+
+// public void SetDrumSnare()
+//     {
+
+//         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+//         audioSource.clip = blockSounds[1];
+//         audioSource.Play();
+
+//     }
+
+
+// public void SetDrumBass()
+//     {
+
+//         AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+//         audioSource.clip = blockSounds[2];
+//         audioSource.Play();
+
+//     }
+ 
