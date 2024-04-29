@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -303,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5000002
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalScale.z
@@ -319,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.03539891
+      value: -0.03500002
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -339,11 +339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.018
+      value: -0.014000021
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.003617
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1392,8 +1392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 878038506}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!82 &190920758
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2881,6 +2881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348818934}
   - component: {fileID: 348818933}
+  - component: {fileID: 348818935}
   m_Layer: 0
   m_Name: Canvas_cam
   m_TagString: Untagged
@@ -2954,6 +2955,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &348818935
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348818931}
+  m_Enabled: 1
 --- !u!1 &355007555
 GameObject:
   m_ObjectHideFlags: 0
@@ -5822,7 +5831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: portName
-      value: COM7
+      value: COM5
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: messageListener
@@ -6138,8 +6147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 0}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!82 &808266504
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7423,7 +7432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5000002
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalScale.z
@@ -7439,7 +7448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.03539891
+      value: -0.03500002
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7459,11 +7468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.3
+      value: -0.29600003
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.003617
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8521,8 +8530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 642190530}
-  canvasOther: {fileID: 884556230}
+  blockType: 0
+  blockSounds: []
 --- !u!1 &1007489924
 GameObject:
   m_ObjectHideFlags: 0
@@ -10131,8 +10140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 878038506}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!1 &1194629083
 GameObject:
   m_ObjectHideFlags: 0
@@ -11286,7 +11295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5000002
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalScale.z
@@ -11302,7 +11311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.03539891
+      value: -0.035
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11322,11 +11331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.256
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.003617
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11338,6 +11347,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757833123864355551, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6867109322833912583, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
@@ -11928,8 +11941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 0}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!82 &1378843131
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12758,8 +12771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 0}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!1 &1430763351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6867109322833912583, guid: 349bbc4b518ce104d9184702ec2f4f77, type: 3}
@@ -12878,8 +12891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 528222516}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!1 &1440999271
 GameObject:
   m_ObjectHideFlags: 0
@@ -13777,8 +13790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 0}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!1 &1566674375
 GameObject:
   m_ObjectHideFlags: 0
@@ -13795,7 +13808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1566674376
 Transform:
   m_ObjectHideFlags: 0
@@ -13823,9 +13836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b33388e223826408641ffbdc88cf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 348818933}
-  canvasMain: {fileID: 989764218}
-  canvasOther: {fileID: 884556230}
 --- !u!1 &1586546465
 GameObject:
   m_ObjectHideFlags: 0
@@ -14616,8 +14626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 0}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!82 &1681585938
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16572,8 +16582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 878038506}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!82 &1928587059
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17770,8 +17780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 878038506}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!82 &2089906670
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17902,8 +17912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasMain: {fileID: 0}
-  canvasOther: {fileID: 0}
+  blockType: 0
+  blockSounds: []
 --- !u!82 &2098522843
 AudioSource:
   m_ObjectHideFlags: 0
