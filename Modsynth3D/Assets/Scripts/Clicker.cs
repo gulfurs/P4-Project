@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Clicker : MonoBehaviour, IClickable
 {
@@ -11,7 +10,7 @@ public class Clicker : MonoBehaviour, IClickable
     private List<AudioClip> blockSounds;
 
     private GameObject interfaceInstance; 
-    private GameObject changeButt;
+
     //private ChangeAudio changeAudio;
 
     void Start () {
@@ -20,55 +19,35 @@ public class Clicker : MonoBehaviour, IClickable
 
         blockSounds.Clear();
 
+        /*AudioSource audioSource = GetComponent<AudioSource>();
+        if (audioSource != null && audioSource.clip != null)
+        {
+        blockSounds.Insert(0, audioSource.clip);
+        }*/
+
+        // GameObject changeAudioObject = GameObject.Find("Snare");
+
+        //  if (changeAudioObject != null)
+        // {
+        //     changeAudio = changeAudioObject.GetComponent<ChangeAudio>();
+        //     blockSounds.Add(changeAudio.audioClip);
+        // }
+
+
     if (interfaceCanvas != null) {
-
-         Transform soundContainer = null;
-         AudioSource audioSource = gameObject.GetComponent<AudioSource>(); 
-
        switch (blockType)
         {
             case BlockManager.BlockType.Drums:
-                changeButt = blockManager.drumButton;
                 blockSounds.AddRange(blockManager.drumLoops);
                 interfaceInstance = Instantiate(blockManager.drumInterface, interfaceCanvas.transform);
-                 
-                soundContainer = interfaceInstance.transform.Find("Sounds_Container");
-
-                 for (int i = 0; i < blockSounds.Count - 1; i++)
-                {
-                    GameObject newButton = Instantiate(changeButt, soundContainer);
-                    Button buttonComponent = newButton.GetComponent<Button>();
-                    int currentIndex = i;
-                    buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
-                }
                 break;
             case BlockManager.BlockType.Instrument:
-                changeButt = blockManager.drumButton;
                 blockSounds.AddRange(blockManager.InstrumentsLoops);
                 interfaceInstance = Instantiate(blockManager.instrumentInterface, interfaceCanvas.transform);
-                soundContainer = interfaceInstance.transform.Find("Sounds_Container");
-
-                for (int i = 0; i < blockSounds.Count - 1; i++)
-                {
-                    GameObject newButton = Instantiate(changeButt, soundContainer);
-                    Button buttonComponent = newButton.GetComponent<Button>();
-                    int currentIndex = i;
-                    buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
-                }
                 break;
             case BlockManager.BlockType.Piano:
-                changeButt = blockManager.drumButton;
                 blockSounds.AddRange(blockManager.pianoLoops);
                 interfaceInstance = Instantiate(blockManager.pianoInterface, interfaceCanvas.transform);
-                soundContainer = interfaceInstance.transform.Find("Sounds_Container");
-
-                 for (int i = 0; i < blockSounds.Count - 1; i++)
-                {
-                   GameObject newButton = Instantiate(changeButt, soundContainer);
-                    Button buttonComponent = newButton.GetComponent<Button>();
-                     int currentIndex = i;
-                    buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
-                }
                 break;
             default:
                 break;
@@ -121,16 +100,6 @@ public class Clicker : MonoBehaviour, IClickable
         }   
     }
 
-    public void ChangeAudioButton(GameObject button, int index)
-    {
-    AudioSource audioSource = GetComponent<AudioSource>();
-
-    if (audioSource != null && index < blockSounds.Count)
-        {
-        audioSource.clip = blockSounds[index];
-        audioSource.Play();
-        }
-    }
 
 }
 

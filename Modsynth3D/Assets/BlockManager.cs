@@ -18,6 +18,4 @@ public class BlockManager : MonoBehaviour
     public GameObject drumInterface;
     public GameObject instrumentInterface;
     public GameObject pianoInterface;
-
-    public GameObject drumButton;
 }
