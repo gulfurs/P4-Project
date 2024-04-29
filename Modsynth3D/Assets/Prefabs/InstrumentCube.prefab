@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5913987654524589769}
   - component: {fileID: 3224146772645529648}
   - component: {fileID: 591313627526334157}
+  - component: {fileID: 5376228880405328830}
   m_Layer: 5
   m_Name: InstrumentCube
   m_TagString: Untagged
@@ -109,3 +110,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5376228880405328830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504301552879464961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4108ea395ad0f1a4a82af28acd4b01ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockType: 2
+  blockSounds: []
