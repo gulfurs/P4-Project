@@ -13,8 +13,6 @@ public class ChangeAudio : MonoBehaviour
     void Start()
     {
     audioSource = GetComponent<AudioSource>();
-    audioSource = GetComponent<AudioSource>();
-    audioSource = GetComponent<AudioSource>();
 
 
     if (audioClip == null)
