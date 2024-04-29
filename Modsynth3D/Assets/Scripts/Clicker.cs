@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Clicker : MonoBehaviour, IClickable
 {
@@ -39,6 +40,7 @@ public class Clicker : MonoBehaviour, IClickable
                     GameObject newButton = Instantiate(changeButt, soundContainer);
                     Button buttonComponent = newButton.GetComponent<Button>();
                     int currentIndex = i;
+                    newButton.GetComponentInChildren<TextMeshProUGUI>().text = blockSounds[currentIndex].name;
                     buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
                 }
                 break;
@@ -51,8 +53,10 @@ public class Clicker : MonoBehaviour, IClickable
                 for (int i = 0; i < blockSounds.Count - 1; i++)
                 {
                     GameObject newButton = Instantiate(changeButt, soundContainer);
+                    
                     Button buttonComponent = newButton.GetComponent<Button>();
                     int currentIndex = i;
+                    newButton.GetComponentInChildren<TextMeshProUGUI>().text = blockSounds[currentIndex].name;
                     buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
                 }
                 break;
@@ -67,6 +71,7 @@ public class Clicker : MonoBehaviour, IClickable
                    GameObject newButton = Instantiate(changeButt, soundContainer);
                     Button buttonComponent = newButton.GetComponent<Button>();
                      int currentIndex = i;
+                    newButton.GetComponentInChildren<TextMeshProUGUI>().text = blockSounds[currentIndex].name;
                     buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
                 }
                 break;

@@ -17,14 +17,14 @@ void loop() {
   Res(Pin2);
   Serial.println("------");
 
-  delay(10); // Wait for a moment before reading again
+  delay(300); // Wait for a moment before reading again
 }
 
 void Res(int Pin)
 {
- int sensorValue = analogRead(Pin); // Read the analog pin
-  float recalc = sensorValue * (Vin / convert);
-  float R = (Rmain * recalc)/(Vin-recalc);
+  int sensorValue = ((analogRead(Pin) / 5) * 5); // Read the analog pin
+  //float recalc = sensorValue * (Vin / convert);
+  //float R = (Rmain * recalc)/(Vin-recalc);
 
   //Serial.print("Sens: ");
   //Serial.println(sensorValue);
@@ -32,6 +32,6 @@ void Res(int Pin)
   //Serial.println(recalc);
   Serial.print("R" + String(Pin-13) + " :");
   //Serial.print("R: ");
-  Serial.println(R);
+  Serial.println(sensorValue);
   Serial.println("");
 }

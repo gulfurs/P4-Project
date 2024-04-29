@@ -34,7 +34,7 @@ public class ConsoleReader : MonoBehaviour
                 float value;
                 if (float.TryParse(parts[2].Trim(), out value))
                 {
-                    UpdateText(valueText, value / 100);
+                    UpdateText(valueText, value);
                 }
             }
         }
@@ -49,7 +49,7 @@ public class ConsoleReader : MonoBehaviour
                 float value;
                 if (float.TryParse(parts[2].Trim(), out value))
                 {
-                    UpdateText(valueText2, value / 100);
+                    UpdateText(valueText2, value);
                 }
             }
         }
@@ -64,13 +64,13 @@ public class ConsoleReader : MonoBehaviour
                 float value;
                 if (float.TryParse(parts[2].Trim(), out value))
                 {
-                    UpdateText(valueText3, value / 100);
+                    UpdateText(valueText3, value);
                 }
             }
         }
     }
 
     private void UpdateText(TextMeshProUGUI textMesh, float value) {
-        textMesh.text = value.ToString("F2");
+        textMesh.text = value.ToString();
     }   
 }
