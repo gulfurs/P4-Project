@@ -7,17 +7,18 @@ public class BlockManager : MonoBehaviour
     public enum BlockType
     {
         Drums,
-        Instrument,
-        Piano
+        MIDI,
+        PartyDrums,
+        PartyMIDI
     }
 
     public List<AudioClip> drumLoops;
-    public List<AudioClip> InstrumentsLoops;
-    public List<AudioClip> pianoLoops;
+    public List<AudioClip> MIDILoops;
 
-    public GameObject drumInterface;
-    public GameObject instrumentInterface;
-    public GameObject pianoInterface;
+    public GameObject drum_Interface;
+    public GameObject MIDI_Interface;
+    public GameObject partyDrum_Interface;
+    public GameObject partyMIDI_Interface;
 
-    public GameObject drumButton;
+    public GameObject switchButtons;
 }

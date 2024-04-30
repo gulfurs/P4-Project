@@ -12,7 +12,7 @@ public class Clicker : MonoBehaviour, IClickable
     private List<AudioClip> blockSounds;
 
     private GameObject interfaceInstance; 
-    private GameObject changeButt;
+    private GameObject changeButton;
     //private ChangeAudio changeAudio;
 
     void Start () {
@@ -29,30 +29,30 @@ public class Clicker : MonoBehaviour, IClickable
        switch (blockType)
         {
             case BlockManager.BlockType.Drums:
-                changeButt = blockManager.drumButton;
+                changeButton = blockManager.switchButtons;
                 blockSounds.AddRange(blockManager.drumLoops);
-                interfaceInstance = Instantiate(blockManager.drumInterface, interfaceCanvas.transform);
+                interfaceInstance = Instantiate(blockManager.drum_Interface, interfaceCanvas.transform);
                  
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
 
                  for (int i = 0; i < blockSounds.Count - 1; i++)
                 {
-                    GameObject newButton = Instantiate(changeButt, soundContainer);
+                    GameObject newButton = Instantiate(changeButton, soundContainer);
                     Button buttonComponent = newButton.GetComponent<Button>();
                     int currentIndex = i;
                     newButton.GetComponentInChildren<TextMeshProUGUI>().text = blockSounds[currentIndex].name;
                     buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
                 }
                 break;
-            case BlockManager.BlockType.Instrument:
-                changeButt = blockManager.drumButton;
-                blockSounds.AddRange(blockManager.InstrumentsLoops);
-                interfaceInstance = Instantiate(blockManager.instrumentInterface, interfaceCanvas.transform);
+            case BlockManager.BlockType.MIDI:
+                changeButton = blockManager.switchButtons;
+                blockSounds.AddRange(blockManager.MIDILoops);
+                interfaceInstance = Instantiate(blockManager.MIDI_Interface, interfaceCanvas.transform);
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
 
                 for (int i = 0; i < blockSounds.Count - 1; i++)
                 {
-                    GameObject newButton = Instantiate(changeButt, soundContainer);
+                    GameObject newButton = Instantiate(changeButton, soundContainer);
                     
                     Button buttonComponent = newButton.GetComponent<Button>();
                     int currentIndex = i;
@@ -60,15 +60,30 @@ public class Clicker : MonoBehaviour, IClickable
                     buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
                 }
                 break;
-            case BlockManager.BlockType.Piano:
-                changeButt = blockManager.drumButton;
-                blockSounds.AddRange(blockManager.pianoLoops);
-                interfaceInstance = Instantiate(blockManager.pianoInterface, interfaceCanvas.transform);
+            case BlockManager.BlockType.PartyMIDI:
+                changeButton = blockManager.switchButtons;
+                blockSounds.AddRange(blockManager.MIDILoops);
+                interfaceInstance = Instantiate(blockManager.partyMIDI_Interface, interfaceCanvas.transform);
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
 
                  for (int i = 0; i < blockSounds.Count - 1; i++)
                 {
-                   GameObject newButton = Instantiate(changeButt, soundContainer);
+                   GameObject newButton = Instantiate(changeButton, soundContainer);
+                    Button buttonComponent = newButton.GetComponent<Button>();
+                     int currentIndex = i;
+                    newButton.GetComponentInChildren<TextMeshProUGUI>().text = blockSounds[currentIndex].name;
+                    buttonComponent.onClick.AddListener(() => ChangeAudioButton(newButton, currentIndex));
+                }
+                break;
+             case BlockManager.BlockType.PartyDrums:
+                changeButton = blockManager.switchButtons;
+                blockSounds.AddRange(blockManager.drumLoops);
+                interfaceInstance = Instantiate(blockManager.partyDrum_Interface, interfaceCanvas.transform);
+                soundContainer = interfaceInstance.transform.Find("Sounds_Container");
+
+                 for (int i = 0; i < blockSounds.Count - 1; i++)
+                {
+                   GameObject newButton = Instantiate(changeButton, soundContainer);
                     Button buttonComponent = newButton.GetComponent<Button>();
                      int currentIndex = i;
                     newButton.GetComponentInChildren<TextMeshProUGUI>().text = blockSounds[currentIndex].name;
@@ -94,7 +109,7 @@ public class Clicker : MonoBehaviour, IClickable
 
 
     public void OnRightClick()
-    {
+    {/*
         if (blockSounds.Count > 0)
         {
         AudioClip currentClip = blockSounds[0]; // Get first Clip
@@ -123,7 +138,7 @@ public class Clicker : MonoBehaviour, IClickable
                 i--;
                 }
             }
-        }   
+        }  */ 
     }
 
     public void ChangeAudioButton(GameObject button, int index)

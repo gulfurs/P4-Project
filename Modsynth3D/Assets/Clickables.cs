@@ -26,9 +26,8 @@ public class Clickables : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit[] hits = Physics.RaycastAll(originMouse);
-                
-            foreach (RaycastHit hit in hits)
+            RaycastHit hit;
+            if (Physics.Raycast(originMouse, out hit))
             {
                 GameObject hitObject = hit.collider.gameObject;
                 //Check if ray hits clicker
@@ -47,20 +46,19 @@ public class Clickables : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1))
             {
-                RaycastHit[] hits = Physics.RaycastAll(originMouse);
-
-                foreach (RaycastHit hit in hits)
+                RaycastHit hit;
+                if (Physics.Raycast(originMouse, out hit))
                 {
-                    GameObject hitObject = hit.collider.gameObject;
-                    //Check if ray hits clicker
-                    Clicker clickable = hit.collider.GetComponent<Clicker>();
-                    //Checks if it's clicker
-                    IClickable clicky = hitObject.GetComponent<IClickable>();
-                    if (clickable != null)
-                    {
-                        Debug.Log("Object Right clicked: " + hit.collider.gameObject.name);
-                        clicky.OnRightClick();
-                    }
+                GameObject hitObject = hit.collider.gameObject;
+                //Check if ray hits clicker
+                Clicker clickable = hit.collider.GetComponent<Clicker>();
+                //Checks if it's clicker
+                IClickable clicky = hitObject.GetComponent<IClickable>();
+                if (clickable != null)
+                {
+                    Debug.Log("Object Right clicked: " + hit.collider.gameObject.name);
+                    clicky.OnRightClick();
+                }
                 }
             }
     }
