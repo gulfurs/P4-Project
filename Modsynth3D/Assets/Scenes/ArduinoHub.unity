@@ -23310,6 +23310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1128961329}
+  frequencySlider: {fileID: 0}
 --- !u!1 &1240696971
 GameObject:
   m_ObjectHideFlags: 0
@@ -30249,6 +30250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009af5b443581f24abcdc26181072679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pianoSprite: {fileID: 21300000, guid: ce1fda236a11f17428d6226362bcc5e5, type: 3}
+  trumpetSprite: {fileID: 21300000, guid: a4fb3004b2dc84c40921d8fd47300bdd, type: 3}
+  guitarSprite: {fileID: 21300000, guid: 4a0105a21db5abc4c9881179a1b59670, type: 3}
   pianoUV: {fileID: 2800000, guid: b24a04dd7c8d85549be9d4426317d034, type: 3}
   trumpetUV: {fileID: 2800000, guid: 134cb18dff120134bbf7835ee374df78, type: 3}
   guitarUV: {fileID: 2800000, guid: b3a9cb2ca3ecdd747b768d7886c0d81f, type: 3}

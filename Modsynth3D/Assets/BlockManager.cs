@@ -13,6 +13,10 @@ public class BlockManager : MonoBehaviour
         PartyMIDI
     }
 
+    public Sprite pianoSprite;
+    public Sprite trumpetSprite;
+    public Sprite guitarSprite;
+
     public Texture2D pianoUV;
     public Texture2D trumpetUV;
     public Texture2D guitarUV;

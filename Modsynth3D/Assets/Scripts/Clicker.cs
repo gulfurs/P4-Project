@@ -95,7 +95,7 @@ public class Clicker : MonoBehaviour, IClickable
             Destroy(child.gameObject);
             }
             SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.trumpetUV);
+            ChangeBlockTexture(blockManager.trumpetUV, blockManager.trumpetSprite);
         } else if (blockSounds[0] == blockManager.TrumpetLoops[0]) {
             blockSounds.Clear();
             blockSounds.AddRange(blockManager.GuitarLoops);
@@ -105,7 +105,7 @@ public class Clicker : MonoBehaviour, IClickable
             Destroy(child.gameObject);
             }
             SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.guitarUV);
+            ChangeBlockTexture(blockManager.guitarUV, blockManager.guitarSprite);
         } else if (blockSounds[0] == blockManager.GuitarLoops[0]) {
             blockSounds.Clear();
             blockSounds.AddRange(blockManager.MIDILoops);
@@ -115,7 +115,7 @@ public class Clicker : MonoBehaviour, IClickable
             Destroy(child.gameObject);
             }
             SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.pianoUV);
+            ChangeBlockTexture(blockManager.pianoUV, blockManager.pianoSprite);
         }
     } else if (blockType == BlockManager.BlockType.PartyMIDI) {
         if (blockSounds[0] == blockManager.MIDILoops[0])
@@ -128,7 +128,7 @@ public class Clicker : MonoBehaviour, IClickable
             Destroy(child.gameObject);
             }
             SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.partyTrumpetUV);
+            ChangeBlockTexture(blockManager.partyTrumpetUV, blockManager.trumpetSprite);
         } else if (blockSounds[0] == blockManager.TrumpetLoops[0]) {
             blockSounds.Clear();
             blockSounds.AddRange(blockManager.GuitarLoops);
@@ -138,7 +138,7 @@ public class Clicker : MonoBehaviour, IClickable
             Destroy(child.gameObject);
             }
             SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.partyGuitarUV);
+            ChangeBlockTexture(blockManager.partyGuitarUV, blockManager.guitarSprite);
         } else if (blockSounds[0] == blockManager.GuitarLoops[0]) {
             blockSounds.Clear();
             blockSounds.AddRange(blockManager.MIDILoops);
@@ -148,7 +148,7 @@ public class Clicker : MonoBehaviour, IClickable
             Destroy(child.gameObject);
             }
             SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.partyPianoUV);
+            ChangeBlockTexture(blockManager.partyPianoUV, blockManager.pianoSprite);
         }
     }
 }
@@ -176,12 +176,24 @@ public class Clicker : MonoBehaviour, IClickable
         }
     }
 
-    void ChangeBlockTexture(Texture2D texture)
+    void ChangeBlockTexture(Texture2D texture, Sprite spr)
     {
+    Image iconSprite = null;
+
+    Transform iconHolder = interfaceInstance.transform.Find("InterfaceIcon");
+    if (iconHolder != null) {
+    iconSprite = iconHolder.GetComponent<Image>();
+
+    }
     MeshRenderer meshRenderer = GetComponentInChildren<MeshRenderer>();
     if (meshRenderer != null && meshRenderer.material != null)
         {
         meshRenderer.material.mainTexture = texture;
+        }
+
+    if (iconSprite != null)
+        {
+        iconSprite.sprite = spr;
         }
     }
 }
