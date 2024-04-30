@@ -17,11 +17,12 @@ void loop() {
   Res(Pin2);
   Serial.println("------");
 
-  delay(300); // Wait for a moment before reading again
+  delay(1000); // Wait for a moment before reading again
 }
 
 void Res(int Pin)
 {
+  //int sensorValue = analogRead(Pin);
   int sensorValue = ((analogRead(Pin) / 5) * 5); // Read the analog pin
   //float recalc = sensorValue * (Vin / convert);
   //float R = (Rmain * recalc)/(Vin-recalc);
