@@ -30,6 +30,12 @@ public class AudioMan_buttons : MonoBehaviour
             source.UnPause();
         }
     }
+     public void Revert(){
+
+        foreach (AudioSource source in audioSource){
+            source.Play();
+        }
+    }
 
     void VolumeChange(float volume){
         
