@@ -9,10 +9,9 @@ public class ChangeReverb : MonoBehaviour
     // Reference to the AudioReverbFilter component
     private AudioReverbFilter reverbFilter;
 
-
+    
     public Slider knobSlider; // Reference to the knob slider in the Unity Inspector
     public float knobValue; // Public variable to store the knob value
-
 
 
     void Start()
@@ -42,6 +41,10 @@ public class ChangeReverb : MonoBehaviour
     }
 
     
+   
+
+   
+
     public void SetReverbCave()
 
     {

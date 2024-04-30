@@ -47,7 +47,7 @@ public class CubeSpawn : MonoBehaviour{
             renderer.enabled = isActive;
         }
 
-         // Enable/disable Colliders
+        // Enable/disable Colliders
         foreach (BoxCollider collider in colliders)
         {
             collider.enabled = isActive;
@@ -57,9 +57,14 @@ public class CubeSpawn : MonoBehaviour{
         foreach (AudioSource audioSource in audioSources)
         {
             if (isActive)
-                audioSource.volume = 1f; // Volume 1
+            {
+                //audioSource.volume = 1f; // Volume 1
+            }
             else
+            {
                 audioSource.volume = 0f; // Volume 0
+            }
+
         }
     }
 }

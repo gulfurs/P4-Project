@@ -27,7 +27,7 @@ public class AudioMan_buttons : MonoBehaviour
      public void Play(){
 
         foreach (AudioSource source in audioSource){
-            source.Play();
+            source.UnPause();
         }
     }
 
