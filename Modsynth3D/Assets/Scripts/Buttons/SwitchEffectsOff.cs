@@ -7,13 +7,15 @@ public class SwitchEffectsOff : MonoBehaviour
 
 
     private bool TurnedOn;
-    AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+    //AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
 
     
     public void SwitchReverb()
     {
 
         // Find all audio sources in the scene
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+
 
         if (TurnedOn == false)
         {
