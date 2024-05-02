@@ -32,6 +32,7 @@ public class Clicker : MonoBehaviour, IClickable
                 changeButton = blockManager.switchButtons;
                 blockSounds.AddRange(blockManager.drumLoops);
                 interfaceInstance = Instantiate(blockManager.drum_Interface, interfaceCanvas.transform);
+                
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
                 SetupButtons(blockSounds, changeButton, interfaceInstance, soundContainer);
 
@@ -48,6 +49,7 @@ public class Clicker : MonoBehaviour, IClickable
                 changeButton = blockManager.switchButtons;
                 blockSounds.AddRange(blockManager.MIDILoops);
                 interfaceInstance = Instantiate(blockManager.partyMIDI_Interface, interfaceCanvas.transform);
+                interfaceInstance.GetComponent<EffectHandler>().myBlock = gameObject;
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
                 SetupButtons(blockSounds, changeButton, interfaceInstance, soundContainer);
 
@@ -56,6 +58,7 @@ public class Clicker : MonoBehaviour, IClickable
                 changeButton = blockManager.switchButtons;
                 blockSounds.AddRange(blockManager.drumLoops);
                 interfaceInstance = Instantiate(blockManager.partyDrum_Interface, interfaceCanvas.transform);
+                interfaceInstance.GetComponent<EffectHandler>().myBlock = gameObject;
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
                 SetupButtons(blockSounds, changeButton, interfaceInstance, soundContainer);
 
@@ -82,42 +85,42 @@ public class Clicker : MonoBehaviour, IClickable
     BlockManager blockManager = FindObjectOfType<BlockManager>();
     Transform sC;
 
-    if (blockType == BlockManager.BlockType.MIDI)
-    {
-        if (blockSounds[0] == blockManager.MIDILoops[0])
+        if (blockType == BlockManager.BlockType.MIDI)
         {
+            if (blockSounds[0] == blockManager.MIDILoops[0])
+            {
 
-            blockSounds.Clear();
-            blockSounds.AddRange(blockManager.TrumpetLoops);
-            sC = interfaceInstance.transform.Find("Sounds_Container");
-            foreach (Transform child in sC)
-            {
-            Destroy(child.gameObject);
-            }
-            SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.trumpetUV, blockManager.trumpetSprite);
-        } else if (blockSounds[0] == blockManager.TrumpetLoops[0]) {
-            blockSounds.Clear();
-            blockSounds.AddRange(blockManager.GuitarLoops);
-            sC = interfaceInstance.transform.Find("Sounds_Container");
-            foreach (Transform child in sC)
-            {
-            Destroy(child.gameObject);
-            }
-            SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.guitarUV, blockManager.guitarSprite);
-        } else if (blockSounds[0] == blockManager.GuitarLoops[0]) {
-            blockSounds.Clear();
-            blockSounds.AddRange(blockManager.MIDILoops);
-            sC = interfaceInstance.transform.Find("Sounds_Container");
-            foreach (Transform child in sC)
-            {
-            Destroy(child.gameObject);
-            }
-            SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
-            ChangeBlockTexture(blockManager.pianoUV, blockManager.pianoSprite);
+                blockSounds.Clear();
+                blockSounds.AddRange(blockManager.TrumpetLoops);
+                sC = interfaceInstance.transform.Find("Sounds_Container");
+                foreach (Transform child in sC)
+                {
+                Destroy(child.gameObject);
+                }
+                SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
+                ChangeBlockTexture(blockManager.trumpetUV, blockManager.trumpetSprite);
+            } else if (blockSounds[0] == blockManager.TrumpetLoops[0]) {
+                blockSounds.Clear();
+                blockSounds.AddRange(blockManager.GuitarLoops);
+                sC = interfaceInstance.transform.Find("Sounds_Container");
+                foreach (Transform child in sC)
+                {
+                Destroy(child.gameObject);
+                }
+                SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
+                ChangeBlockTexture(blockManager.guitarUV, blockManager.guitarSprite);
+            } else if (blockSounds[0] == blockManager.GuitarLoops[0]) {
+                blockSounds.Clear();
+                blockSounds.AddRange(blockManager.MIDILoops);
+                sC = interfaceInstance.transform.Find("Sounds_Container");
+                foreach (Transform child in sC)
+                {
+                Destroy(child.gameObject);
+                }
+                SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
+                ChangeBlockTexture(blockManager.pianoUV, blockManager.pianoSprite);
         }
-    } else if (blockType == BlockManager.BlockType.PartyMIDI) {
+    } if (blockType == BlockManager.BlockType.PartyMIDI) {
         if (blockSounds[0] == blockManager.MIDILoops[0])
         {
             blockSounds.Clear();
