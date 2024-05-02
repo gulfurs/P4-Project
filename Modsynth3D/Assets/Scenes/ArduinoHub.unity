@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44855434, g: 0.4986031, b: 0.5756551, a: 1}
+  m_IndirectSpecularColor: {r: 0.44855404, g: 0.49860275, b: 0.5756545, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31273,7 +31273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: portName
-      value: COM7
+      value: COM5
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: messageListener
@@ -31282,6 +31282,10 @@ PrefabInstance:
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: maxUnreadMessages
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
+      propertyPath: reconnectionDelay
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: objectToEnableDisable
@@ -35655,6 +35659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1982872521}
   - component: {fileID: 1982872520}
+  - component: {fileID: 1982872522}
   m_Layer: 0
   m_Name: ValueReader
   m_TagString: Untagged
@@ -35669,7 +35674,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982872519}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f053ae39ed954df42b8bba11a006003a, type: 3}
   m_Name: 
@@ -35695,6 +35700,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1982872522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982872519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef214eb4a0c21e438e305092421d841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pin1: {fileID: 1738604916}
+  Pin2: {fileID: 250310702}
+  Pin3: {fileID: 324310441}
+  value1: {fileID: 489141425}
+  value2: {fileID: 666485570}
+  value3: {fileID: 1108075814}
+  cubeSpawner: {fileID: 0}
 --- !u!1 &1986399507
 GameObject:
   m_ObjectHideFlags: 0

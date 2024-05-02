@@ -47,19 +47,19 @@ public class ValueReader : MonoBehaviour
     int GetValue(int value)
     {
         //Drum
-        if (value >= 185 && value <= 195)
+        if (value >= 180 && value <= 205)
         {
             return 2;
         } //Piano
-        else if (value >= 200 && value <= 215)
+        else if (value >= 210 && value <= 270)
         {
-            return 3;
+            return 3; 
         } //Party Drum
-        else if (value >= 140 && value <= 145)
+        else if (value >= 150 && value <= 165)
         {
             return 4;
         } // Party Piano
-        else if (value >= 150 && value <= 155)
+        else if (value >= 165 && value <= 175)
         {
             return 5;
         }
