@@ -5031,7 +5031,7 @@ GameObject:
   - component: {fileID: 305096457}
   - component: {fileID: 305096456}
   m_Layer: 5
-  m_Name: Knob_Slider (1)
+  m_Name: DistortionSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6577,7 +6577,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 27266768}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 1
   m_Value: 100
   m_OnValueChanged:
@@ -6882,6 +6882,7 @@ RectTransform:
   - {fileID: 1068041473}
   - {fileID: 299108600}
   - {fileID: 1697336385}
+  - {fileID: 743173330}
   - {fileID: 850641161}
   - {fileID: 1979445140}
   m_Father: {fileID: 742953983}
@@ -7343,11 +7344,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 607549c88ce69404a9d335fd70fe9d92, type: 3}
   - {fileID: 8300000, guid: edcb3e70373da844081bc868fec62f1a, type: 3}
   TrumpetLoops:
-  - {fileID: 8300000, guid: 5b2ca135633b1a748a2b1ddac12fcb9e, type: 3}
-  - {fileID: 8300000, guid: ef06072a44d371844936e29098e9d9d4, type: 3}
+  - {fileID: 8300000, guid: b3454aee9651a944282515e6f58a5adf, type: 3}
   - {fileID: 8300000, guid: 5e9c1e2d2e3826b47b7ea8a099dc2ec4, type: 3}
   - {fileID: 8300000, guid: d0f8a7c7bfc7853489310948da770445, type: 3}
-  - {fileID: 8300000, guid: 45c2600fcacdfe249a55db1562c5f0cc, type: 3}
+  - {fileID: 8300000, guid: 8894244b0f1521a4eba910c753f620f4, type: 3}
+  - {fileID: 8300000, guid: c3ed2e9e531b08845a4ccdf31afbbb26, type: 3}
   GuitarLoops:
   - {fileID: 8300000, guid: 50c2a339e960d2a4599d0e72e4318949, type: 3}
   - {fileID: 8300000, guid: 08924b8e619ae6b429649db0f1c97085, type: 3}
@@ -12114,11 +12115,11 @@ RectTransform:
   m_LocalScale: {x: 4.648359, y: 9.296718, z: 1.8593436}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 850641161}
+  m_Father: {fileID: 450597297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: 97.5}
+  m_AnchoredPosition: {x: -15.999996, y: 101.99999}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &743173332
@@ -13054,7 +13055,6 @@ RectTransform:
   - {fileID: 532106242}
   - {fileID: 847398934}
   - {fileID: 1150326606}
-  - {fileID: 743173330}
   - {fileID: 106232279}
   m_Father: {fileID: 450597297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14329,7 +14329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 94.3, y: -126.625}
+  m_AnchoredPosition: {x: 94.3, y: -159}
   m_SizeDelta: {x: -18.600006, y: -3.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &919676270
@@ -14971,7 +14971,7 @@ GameObject:
   - component: {fileID: 942943723}
   - component: {fileID: 942943722}
   m_Layer: 5
-  m_Name: Cross
+  m_Name: BackArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15059,6 +15059,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -17120,6 +17132,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 743173329}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 850641160}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1979445139}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1068041475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17619,7 +17667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -235}
+  m_AnchoredPosition: {x: 230, y: -235}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1112830830
@@ -17919,6 +17967,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 850641160}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 743173329}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -22607,7 +22667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 94.3, y: -126.625}
+  m_AnchoredPosition: {x: 94.3, y: -159}
   m_SizeDelta: {x: -18.600006, y: -3.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407523161
@@ -24038,8 +24098,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myBlock: {fileID: 0}
-  distortionSlider: {fileID: 1890911539}
-  delaySlider: {fileID: 1533479900}
+  distortionSlider: {fileID: 1533479900}
+  delaySlider: {fileID: 1890911539}
   Offswitch: {fileID: 1671324907}
   underWaterSwitch: {fileID: 562987326}
   FeverSwitch: {fileID: 1112830830}
@@ -25065,7 +25125,7 @@ GameObject:
   - component: {fileID: 1525656028}
   - component: {fileID: 1525656027}
   m_Layer: 5
-  m_Name: Cross
+  m_Name: GoBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25157,6 +25217,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 743173329}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1525656028
 MonoBehaviour:
@@ -25359,7 +25431,7 @@ GameObject:
   - component: {fileID: 1533479900}
   - component: {fileID: 1533479899}
   m_Layer: 5
-  m_Name: Knob_Slider (1)
+  m_Name: DistortionKnob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27498,7 +27570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: -235}
+  m_AnchoredPosition: {x: -50, y: -235}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671324907
@@ -27558,14 +27630,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2c563a6773f4bea4ea8535f947af5e29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30052,7 +30124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -235}
+  m_AnchoredPosition: {x: 230, y: -235}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825433891
@@ -31505,7 +31577,7 @@ GameObject:
   - component: {fileID: 1890911539}
   - component: {fileID: 1890911538}
   m_Layer: 5
-  m_Name: Knob_Slider (1)
+  m_Name: DelayKnob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31610,7 +31682,7 @@ GameObject:
   - component: {fileID: 1893608031}
   - component: {fileID: 1893608030}
   m_Layer: 5
-  m_Name: Knob_Slider (1)
+  m_Name: DelayKnob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32999,7 +33071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: -235}
+  m_AnchoredPosition: {x: -50, y: -235}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1961084789
@@ -33059,14 +33131,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2c563a6773f4bea4ea8535f947af5e29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
