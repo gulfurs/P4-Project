@@ -17,7 +17,7 @@ void loop() {
   Res(Pin2);
   Serial.println("------");
 
-  delay(1000); // Wait for a moment before reading again
+  delay(500); // Wait for a moment before reading again
 }
 
 void Res(int Pin)
