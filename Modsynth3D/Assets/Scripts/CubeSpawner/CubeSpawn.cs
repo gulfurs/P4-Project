@@ -10,7 +10,13 @@ public class CubeSpawn : MonoBehaviour{
     public TextMeshProUGUI texty;
 
     public GameObject[] cubeCombinations;
+
+    private AudioMan_buttons audioMan;
     
+    void Start(){
+        audioMan = FindObjectOfType<AudioMan_buttons>();
+    }
+
     public void SpawnCube(){
         // Ensure the value is within the range of the array
         int index = Mathf.Clamp(integerValue - 1, 0, cubeCombinations.Length - 1);
@@ -58,7 +64,7 @@ public class CubeSpawn : MonoBehaviour{
         {
             if (isActive)
             {
-                //audioSource.volume = 1f; // Volume 1
+                audioSource.volume = audioMan.volumeSlider.value/100; // Volume 1
             }
             else
             {

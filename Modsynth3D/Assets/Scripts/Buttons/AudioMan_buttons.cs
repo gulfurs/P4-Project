@@ -12,7 +12,7 @@ public class AudioMan_buttons : MonoBehaviour
     void Start(){
 
         audioSource = FindObjectsOfType<AudioSource>();
-        volumeSlider.onValueChanged.AddListener(VolumeChange);
+        //volumeSlider.onValueChanged.AddListener(VolumeChange);
         frequencySlider.onValueChanged.AddListener(FrequencyChange);
 
     
@@ -31,14 +31,14 @@ public class AudioMan_buttons : MonoBehaviour
         }
     }
 
-    void VolumeChange(float volume){
+    /*void VolumeChange(float volume){
         
         float scaledVolume = volume / 100f;
 
         foreach (AudioSource source in audioSource){
             source.volume = scaledVolume;
         }
-    }
+    }*/
 
      void FrequencyChange(float frequency)
     {
