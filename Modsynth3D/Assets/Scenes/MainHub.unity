@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44855434, g: 0.4986031, b: 0.5756551, a: 1}
+  m_IndirectSpecularColor: {r: 0.44855404, g: 0.49860275, b: 0.5756545, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15192,8 +15192,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 10
-    height: 10
+    width: 2
+    height: 2
 --- !u!222 &790923560
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17361,7 +17361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: portName
-      value: COM7
+      value: COM5
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: messageListener
@@ -25703,7 +25703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   integerValue: 0
-  texty: {fileID: 806911736}
+  texty: {fileID: 1294669902}
   cubeCombinations:
   - {fileID: 155583457}
   - {fileID: 1516986001}
@@ -26983,7 +26983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   integerValue: 0
-  texty: {fileID: 783502837}
+  texty: {fileID: 1790852470}
   cubeCombinations:
   - {fileID: 1648285133}
   - {fileID: 1664939563}
@@ -32675,7 +32675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   integerValue: 0
-  texty: {fileID: 391319029}
+  texty: {fileID: 935468912}
   cubeCombinations:
   - {fileID: 512842729}
   - {fileID: 1307440398}
