@@ -48,46 +48,36 @@ public class ValueReader4 : MonoBehaviour
             {
                 currentStateDuration += Time.deltaTime;
 
-                if (currentStateDuration >= stateStableDuration)
+                if (currentStateDuration >= stateStableDuration || pinValue == 510f)
                 {
                     if (pinValue >= drumRangeLower && pinValue <= drumRangeUpper)
                     {
-                        if (currentPinState != targetState)
-                        {
-                            currentPinState = targetState; // Drum
-                            valueText.text = currentPinState.ToString();
-                        }
+                        currentPinState = targetState; // Drum
                     }
                     else if (pinValue >= pianoRangeLower && pinValue <= pianoRangeUpper)
                     {
-                        if (currentPinState != targetState + 1)
-                        {
-                            currentPinState = targetState + 1; // Piano
-                            valueText.text = currentPinState.ToString();
-                        }
+                        currentPinState = targetState + 1; // Piano
                     }
                     else if (pinValue >= partyDrumRangeLower && pinValue <= partyDrumRangeUpper)
                     {
-                        if (currentPinState != targetState + 2)
-                        {
-                            currentPinState = targetState + 2; // Party Drum
-                            valueText.text = currentPinState.ToString();
-                        }
+                        currentPinState = targetState + 2; // Party Drum
                     }
                     else if (pinValue >= partyPianoRangeLower && pinValue <= partyPianoRangeUpper)
                     {
-                        if (currentPinState != targetState + 3)
-                        {
-                            currentPinState = targetState + 3; // Party Piano
-                            valueText.text = currentPinState.ToString();
-                        }
+                        currentPinState = targetState + 3; // Party Piano
                     }
+                    valueText.text = currentPinState.ToString();
                 }
             }
             else
             {
                 currentStateDuration = 0f;
                 valueText.text = "Pending";
+                // Reset state to 0 only if it's not already 0
+                if (currentPinState != 0)
+                {
+                    currentPinState = 0;
+                }
             }
 
             lastPinValue = pinValue;
