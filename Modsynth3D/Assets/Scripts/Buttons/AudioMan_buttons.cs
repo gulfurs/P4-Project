@@ -9,10 +9,13 @@ public class AudioMan_buttons : MonoBehaviour
     public Slider volumeSlider;
     public Slider frequencySlider;
 
+    private float originalFrequency = 50f;
+
     void Start(){
 
         audioSource = FindObjectsOfType<AudioSource>();
         //volumeSlider.onValueChanged.AddListener(VolumeChange);
+        frequencySlider.value = originalFrequency;
         frequencySlider.onValueChanged.AddListener(FrequencyChange);
 
     
@@ -48,5 +51,10 @@ public class AudioMan_buttons : MonoBehaviour
         {
             source.pitch = scaledFrequency;
         }
+    }
+
+    public void ResetFrequency()
+    {
+        frequencySlider.value = originalFrequency;
     }
 }
