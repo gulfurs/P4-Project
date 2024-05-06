@@ -9,7 +9,7 @@ public class AudioMan_buttons : MonoBehaviour
     public Slider volumeSlider;
     public Slider frequencySlider;
 
-    private float originalFrequency = 50f;
+    private float originalFrequency = 100f;
 
     void Start(){
 
