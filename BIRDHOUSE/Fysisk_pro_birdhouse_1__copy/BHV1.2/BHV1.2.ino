@@ -13,15 +13,13 @@ void setup() {
 void loop() {
   int Read5 = analogRead(Pin5);
   Serial.println(Read5);
-  if(6 > 10){
-    for (pos = 0; pos <= 180; pos += 1) {
-    servo.write(pos); // Rotate the servo to 'pos' degrees
+      for (pos = 0; pos <= 180; pos += 1) {
+      servo.write(pos); // Rotate the servo to 'pos' degrees
     delay(15);
   } 
   for (pos = 180; pos >= 0; pos -= 1) {
     servo.write(pos); // Rotate the servo to 'pos' degrees
     delay(15);
-  }
   }
   delay(200);
 }
