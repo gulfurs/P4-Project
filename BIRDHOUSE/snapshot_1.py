@@ -4,11 +4,8 @@ import machine
 import pyb
 import image
 
-
-
 p = pyb.Pin("P0", pyb.Pin.IN)
 pin_value = p.value() # Returns 0 or 1.
-print(pin_value)
 
 
 sensor.reset()  # Reset and initialize the sensor.
@@ -16,21 +13,12 @@ sensor.set_pixformat(sensor.RGB565)  # Set pixel format to RGB565 (or GRAYSCALE)
 sensor.set_framesize(sensor.QVGA)  # Set frame size to QVGA (320x240)
 sensor.skip_frames(time=2000)  # Wait for settings take effect.
 
-"""
-while (True):
-
-    pin_value = p.value() # Returns 0 or 1.
-
-    print(pin_value)
-"""
-
 
 while True:
     pin_value = p.value()
-    print(pin_value)
 
     if pin_value == 1:
-        print("Ada")
+        print("Picture is being taken")
         timestamp = time.localtime()
         sensor.reset()  # Reset and initialize the sensor.
         sensor.set_pixformat(sensor.RGB565)  # Set pixel format to RGB565 (or GRAYSCALE)
@@ -52,7 +40,7 @@ while True:
         # raise (Exception("Please reset the camera to see the new file."))
 
     elif pin_value == 0:
-        print("No Power")
+        print("No Detection")
         pin_value = p.value()
 
 
