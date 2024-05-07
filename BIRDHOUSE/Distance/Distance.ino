@@ -30,6 +30,7 @@ void setup() {
   servo.attach(motorPin3);  
   pinMode(ledPin, OUTPUT);
   pinMode(motorPin, OUTPUT);
+  pinMode(flexSensorPin, OUTPUT)
   pinMode(motorPin3, OUTPUT);
   // Malthes Del
   pinMode(pirPin, INPUT);
@@ -63,7 +64,7 @@ void loop() {
   Serial.println(" V");
   digitalWrite(motorPin3, 180);
 
-   if (flexvoltage > 3.0) {
+   if (flexValue > 350) {
     servo.write(150);
     digitalWrite(motorPin, HIGH); // Activate motor
   } else {
