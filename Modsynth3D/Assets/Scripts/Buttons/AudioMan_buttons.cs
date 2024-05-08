@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class AudioMan_buttons : MonoBehaviour
 {
     private AudioSource[] audioSource;
+    [SerializeField] AudioMixer audioMix;
     public Slider volumeSlider;
     public Slider frequencySlider;
 
@@ -17,6 +19,7 @@ public class AudioMan_buttons : MonoBehaviour
         //volumeSlider.onValueChanged.AddListener(VolumeChange);
         frequencySlider.value = originalFrequency;
         frequencySlider.onValueChanged.AddListener(FrequencyChange);
+        //frequencySlider.onValueChanged.AddListener(FrequencyChange);
 
     
     }
@@ -34,23 +37,28 @@ public class AudioMan_buttons : MonoBehaviour
         }
     }
 
-    /*void VolumeChange(float volume){
+    public void VolumeChange(){
         
-        float scaledVolume = volume / 100f;
+        float volume = volumeSlider.value;
+        audioMix.SetFloat("master", Mathf.Log10(volume)*20);
+
+        /*float scaledVolume = volume / 100f;
 
         foreach (AudioSource source in audioSource){
             source.volume = scaledVolume;
-        }
-    }*/
+        }*/
+    }
 
-     void FrequencyChange(float frequency)
+    public void FrequencyChange()
     {
-        float scaledFrequency = frequency / 100f;
+        float pitch = frequencySlider.value;
+        audioMix.SetFloat("pitch", pitch);
+        /*float scaledFrequency = frequency / 100f;
 
         foreach (AudioSource source in audioSource)
         {
             source.pitch = scaledFrequency;
-        }
+        }*/
     }
 
     public void ResetFrequency()

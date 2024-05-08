@@ -64,7 +64,7 @@ public class CubeSpawn : MonoBehaviour{
         {
             if (isActive)
             {
-                audioSource.volume = audioMan.volumeSlider.value/100; // Volume 1
+                audioSource.volume = audioSource.gameObject.GetComponent<Clicker>().interfaceInstance.GetComponent<EffectHandler>().volSlider.value/100;
             }
             else
             {

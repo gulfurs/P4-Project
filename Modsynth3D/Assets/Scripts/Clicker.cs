@@ -9,9 +9,9 @@ public class Clicker : MonoBehaviour, IClickable
     public BlockManager.BlockType blockType;
 
     [SerializeField]
-    private List<AudioClip> blockSounds;
+    public List<AudioClip> blockSounds;
 
-    private GameObject interfaceInstance; 
+    public GameObject interfaceInstance; 
     private GameObject changeButton;
     //private ChangeAudio changeAudio;
 
@@ -32,8 +32,9 @@ public class Clicker : MonoBehaviour, IClickable
                 changeButton = blockManager.switchButtons;
                 blockSounds.AddRange(blockManager.drumLoops);
                 interfaceInstance = Instantiate(blockManager.drum_Interface, interfaceCanvas.transform);
-                
+                interfaceInstance.GetComponent<EffectHandler>().myBlock = gameObject;
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
+                soundContainer.GetComponent<UpdateSounds>().thyBlock = gameObject;
                 SetupButtons(blockSounds, changeButton, interfaceInstance, soundContainer);
 
                 break;
@@ -41,7 +42,9 @@ public class Clicker : MonoBehaviour, IClickable
                 changeButton = blockManager.switchButtons;
                 blockSounds.AddRange(blockManager.MIDILoops);
                 interfaceInstance = Instantiate(blockManager.MIDI_Interface, interfaceCanvas.transform);
+                interfaceInstance.GetComponent<EffectHandler>().myBlock = gameObject;
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
+                soundContainer.GetComponent<UpdateSounds>().thyBlock = gameObject;
                 SetupButtons(blockSounds, changeButton, interfaceInstance, soundContainer);
 
                 break;
@@ -51,6 +54,7 @@ public class Clicker : MonoBehaviour, IClickable
                 interfaceInstance = Instantiate(blockManager.partyMIDI_Interface, interfaceCanvas.transform);
                 interfaceInstance.GetComponent<EffectHandler>().myBlock = gameObject;
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
+                soundContainer.GetComponent<UpdateSounds>().thyBlock = gameObject;
                 SetupButtons(blockSounds, changeButton, interfaceInstance, soundContainer);
 
                 break;
@@ -60,6 +64,7 @@ public class Clicker : MonoBehaviour, IClickable
                 interfaceInstance = Instantiate(blockManager.partyDrum_Interface, interfaceCanvas.transform);
                 interfaceInstance.GetComponent<EffectHandler>().myBlock = gameObject;
                 soundContainer = interfaceInstance.transform.Find("Sounds_Container");
+                soundContainer.GetComponent<UpdateSounds>().thyBlock = gameObject;
                 SetupButtons(blockSounds, changeButton, interfaceInstance, soundContainer);
 
                 break;
@@ -157,7 +162,7 @@ public class Clicker : MonoBehaviour, IClickable
 }
 
     void SetupButtons(List<AudioClip> blockSounds, GameObject changeButton, GameObject interfaceInstance, Transform soundContainer)
-{
+    {
     for (int i = 0; i < blockSounds.Count; i++) 
     {
         GameObject newButton = Instantiate(changeButton, soundContainer);
