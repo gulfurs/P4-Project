@@ -1666,6 +1666,7 @@ MonoBehaviour:
   Offswitch: {fileID: 1276577428}
   underWaterSwitch: {fileID: 1752133855}
   FeverSwitch: {fileID: 1821044259}
+  vis: {fileID: 0}
 --- !u!1 &123713479
 GameObject:
   m_ObjectHideFlags: 0
@@ -21323,6 +21324,7 @@ MonoBehaviour:
   Offswitch: {fileID: 0}
   underWaterSwitch: {fileID: 0}
   FeverSwitch: {fileID: 0}
+  vis: {fileID: 0}
 --- !u!1 &1287283940
 GameObject:
   m_ObjectHideFlags: 0
@@ -23322,6 +23324,7 @@ MonoBehaviour:
   Offswitch: {fileID: 0}
   underWaterSwitch: {fileID: 0}
   FeverSwitch: {fileID: 0}
+  vis: {fileID: 0}
 --- !u!1 &1411678427
 GameObject:
   m_ObjectHideFlags: 0
@@ -25052,12 +25055,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef214eb4a0c21e438e305092421d841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pin1: {fileID: 0}
-  Pin2: {fileID: 0}
-  Pin3: {fileID: 0}
-  value1: {fileID: 0}
-  value2: {fileID: 0}
-  value3: {fileID: 0}
+  Pin1: {fileID: 1414563303}
+  Pin2: {fileID: 55367968}
+  Pin3: {fileID: 830274684}
+  value1: {fileID: 49782173}
+  value2: {fileID: 1857503111}
+  value3: {fileID: 395508777}
 --- !u!1001 &1447620687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34766,6 +34769,7 @@ MonoBehaviour:
   Offswitch: {fileID: 404130093}
   underWaterSwitch: {fileID: 184892701}
   FeverSwitch: {fileID: 669412424}
+  vis: {fileID: 0}
 --- !u!1 &1986198853
 GameObject:
   m_ObjectHideFlags: 0
