@@ -26,6 +26,7 @@ public class EffectHandler : MonoBehaviour
     public Button Offswitch;
     public Button underWaterSwitch;
     public Button FeverSwitch;
+    public Visulizer vis;
 
     void Start()
     {
@@ -63,6 +64,8 @@ public class EffectHandler : MonoBehaviour
             UpdateUI(underWaterSwitch, AudioReverbPreset.Underwater);
             UpdateUI(FeverSwitch, AudioReverbPreset.Psychotic);
         }
+
+        vis.spectrumLaviosa(blockAudio);
     }
 
     public void ChangeInstrument() 
