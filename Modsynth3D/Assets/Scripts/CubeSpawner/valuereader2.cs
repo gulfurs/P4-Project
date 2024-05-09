@@ -23,14 +23,14 @@ public class ValueReader4 : MonoBehaviour
     private float currentStateDuration2 = 0f;
     private float currentStateDuration3 = 0f;
 
-    private const float stateStableDuration = 5f; // Time in seconds to consider the state stable
+    private const float stateStableDuration = 2f; // Time in seconds to consider the state stable
     private const float blockChangeDelay = 5f; // Delay in seconds before allowing block change
 
     void Update()
     {
-        UpdatePinState(ref currentStateDuration1, ref lastPin1Value, ref currentPin1State, Pin1, ref value1, 184, 198, 199, 260, 130, 153, 154, 183, 2);
-        UpdatePinState(ref currentStateDuration2, ref lastPin2Value, ref currentPin2State, Pin2, ref value2, 179, 203, 204, 220, 130, 153, 154, 178, 2);
-        UpdatePinState(ref currentStateDuration3, ref lastPin3Value, ref currentPin3State, Pin3, ref value3, 189, 200, 201, 255, 130, 159, 160, 180, 2);
+        UpdatePinState(ref currentStateDuration1, ref lastPin1Value, ref currentPin1State, Pin1, ref value1, 200, 300, 400, 500, 100, 200, 300, 400, 2);
+        UpdatePinState(ref currentStateDuration2, ref lastPin2Value, ref currentPin2State, Pin2, ref value2, 200, 300, 400, 500, 100, 200, 300, 400, 2);
+        UpdatePinState(ref currentStateDuration3, ref lastPin3Value, ref currentPin3State, Pin3, ref value3, 200, 300, 400, 500, 100, 200, 300, 400, 2);
     }
 
     void UpdatePinState(ref float currentStateDuration, ref float lastPinValue, ref int currentPinState, TextMeshProUGUI pinText, ref TextMeshProUGUI valueText,
