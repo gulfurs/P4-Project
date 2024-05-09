@@ -24,7 +24,7 @@ public class ValueReader4 : MonoBehaviour
     private float currentStateDuration3 = 0f;
 
     private const float stateStableDuration = 2f; // Time in seconds to consider the state stable
-    private const float blockChangeDelay = 5f; // Delay in seconds before allowing block change
+    private const float blockChangeDelay = 2f; // Delay in seconds before allowing block change
 
     void Update()
     {
