@@ -9,6 +9,9 @@ public class DanceManager : MonoBehaviour
     public GameObject robotidle;
     public GameObject robotsmalldance;
     public GameObject robotBreakDance;
+    public GameObject node1;
+    public GameObject node2;
+
 
 
     // Start is called before the first frame update
