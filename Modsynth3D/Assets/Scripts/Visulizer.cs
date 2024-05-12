@@ -7,7 +7,7 @@ public class Visulizer : MonoBehaviour
 {
     public int numberOfSamples = 64; // Number of samples to analyze
     public Image[] visualizerBars;
-    private float maxScale = 15f; // Maximum scale of the visualizer bar
+    private float maxScale = 10f; // Maximum scale of the visualizer bar
     private float lerpSpeed = 5f;
 
     private float[] spectrumData;
