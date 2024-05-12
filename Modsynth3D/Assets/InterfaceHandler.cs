@@ -5,6 +5,7 @@ using UnityEngine;
 public class InterfaceHandler : MonoBehaviour
 {
     public Camera mainCamera;
+    private GameObject howToTab;
     public bool ok;
     private Vector3 originalCameraPosition;
     private Vector3 elevatedCameraPosition;
@@ -15,6 +16,8 @@ public class InterfaceHandler : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
+
+        howToTab = GameObject.Find("HowTo");
 
         // Store the original camera position
         originalCameraPosition = mainCamera.transform.position;
@@ -27,11 +30,19 @@ public class InterfaceHandler : MonoBehaviour
         ok = CheckChild();
         if (CheckChild())
         {
+            if (howToTab != null)
+            {
+                howToTab.SetActive(false);
+            }
             mainCamera.transform.position = elevatedCameraPosition;
             mainCamera.cullingMask = 1 << LayerMask.NameToLayer("UI");
         }
         else
         {
+            if (howToTab != null)
+            {
+                howToTab.SetActive(true);
+            }
             mainCamera.transform.position = originalCameraPosition;
             mainCamera.cullingMask = -1;
         }
