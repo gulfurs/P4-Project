@@ -70,7 +70,7 @@ public class ValueReader4 : MonoBehaviour
             else
             {
                 currentStateDuration = 0f;
-                valueText.text = pinValue != 510f ? "Pending" : "510";
+                valueText.text = pinValue != 510f ? "Pending" : "0";
 
                 // Reset the state to ensure it registers a change when entering a new range
                 if (currentPinState != 0)

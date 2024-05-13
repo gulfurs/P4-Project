@@ -1,51 +1,74 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class DanceManager : MonoBehaviour
 {
-    public CubeSpawn cs1, cs2, cs3;
+    public Sprite danceSprite; // The sprite you want to search for
+    public List<Image> danceSpritesList; // List to store references to sprites
+    public GameObject robotIdle;
+    public GameObject robotDance;
+    public GameObject robotBreak;
+    public GameObject nodes1;
+    public GameObject nodes2;
 
-    public GameObject robotidle;
-    public GameObject robotsmalldance;
-    public GameObject robotBreakDance;
-    public GameObject node1;
-    public GameObject node2;
-
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        // Initialize the list
+        danceSpritesList = new List<Image>();
+
+        // Call a method to find and add all sprites with the specified sprite initially
+        FindAndAddDanceSprites();
     }
 
-
-
-    // Update is called once per frame
     void Update()
     {
-        int totalvalue;
-        totalvalue = cs1.integerValue + cs2.integerValue + cs3.integerValue;
-        if (totalvalue >= 1 && totalvalue <= 2)
-        {
-            robotsmalldance.SetActive(true);
-            robotidle.SetActive(false);
-            robotBreakDance.SetActive(false);
+        // Update the list of dance sprites continuously
+        UpdateDanceSpritesList();
+        if (danceSpritesList.Count == 1) {
+            robotIdle.SetActive(false);
+            robotDance.SetActive(true);
+            robotBreak.SetActive(false);
+            nodes1.SetActive(true);
+            nodes2.SetActive(true);
+        } else if (danceSpritesList.Count >= 2) {
+            robotIdle.SetActive(false);
+            robotDance.SetActive(false);
+            robotBreak.SetActive(true);
+            nodes1.SetActive(true);
+            nodes2.SetActive(true);
+        } else {
+            robotIdle.SetActive(true);
+            robotDance.SetActive(false);
+            robotBreak.SetActive(false);
+            nodes1.SetActive(false);
+            nodes2.SetActive(false);
         }
-        else if (totalvalue >= 3)
-        {
-            robotBreakDance.SetActive(true);
-            robotidle.SetActive(false);
-            robotsmalldance.SetActive(false);
-        }
-        else
-        {
-            robotidle.SetActive(true);
-            robotBreakDance.SetActive(false);
-            robotsmalldance.SetActive(false);
+    }
 
+    void FindAndAddDanceSprites()
+    {
+        // Find all GameObjects with SpriteRenderer component
+        Image[] allSprites = FindObjectsOfType<Image>(true);
+
+        // Iterate through each SpriteRenderer
+        foreach (Image spriteRenderer in allSprites)
+        {
+            // Check if the sprite of this SpriteRenderer matches the specified danceSprite
+            if (spriteRenderer.sprite == danceSprite)
+            {
+                // Add this SpriteRenderer to the list
+                danceSpritesList.Add(spriteRenderer);
+            }
         }
-        
+    }
+
+    void UpdateDanceSpritesList()
+    {
+        // Clear the existing list
+        danceSpritesList.Clear();
+
+        // Call the method to find and add all sprites with the specified sprite again
+        FindAndAddDanceSprites();
     }
 }

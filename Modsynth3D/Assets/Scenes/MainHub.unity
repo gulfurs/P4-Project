@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200220998}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e144288812dd92e4ebf5772360bd6797, type: 3}
   m_Name: 
@@ -3383,7 +3383,7 @@ MonoBehaviour:
   rightImage: {fileID: 21300000, guid: d0a1dab897a4c5248baa0902063a2f6d, type: 3}
   wrongImage: {fileID: 21300000, guid: 3c711a4e3b9d9c34f92b3331ca202c25, type: 3}
   targetImage: {fileID: 200221001}
-  PinText: {fileID: 0}
+  PinText: {fileID: 824716385}
   stringy: 
 --- !u!114 &200221001
 MonoBehaviour:
@@ -8963,7 +8963,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452985147}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e144288812dd92e4ebf5772360bd6797, type: 3}
   m_Name: 
@@ -8971,7 +8971,7 @@ MonoBehaviour:
   rightImage: {fileID: 21300000, guid: d0a1dab897a4c5248baa0902063a2f6d, type: 3}
   wrongImage: {fileID: 21300000, guid: 3c711a4e3b9d9c34f92b3331ca202c25, type: 3}
   targetImage: {fileID: 452985150}
-  PinText: {fileID: 0}
+  PinText: {fileID: 249424457}
   stringy: 
 --- !u!114 &452985150
 MonoBehaviour:
@@ -9250,7 +9250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &461096212
 Animator:
   serializedVersion: 5
@@ -30140,7 +30140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1744263277
 Animator:
   serializedVersion: 5
@@ -31085,6 +31085,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d285cb2c156537b43aa0304c9fd713e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  danceSprite: {fileID: 21300000, guid: d0a1dab897a4c5248baa0902063a2f6d, type: 3}
+  danceSpritesList: []
+  robotIdle: {fileID: 29198609}
+  robotDance: {fileID: 990875344}
+  robotBreak: {fileID: 1273648477}
+  nodes1: {fileID: 1744263276}
+  nodes2: {fileID: 461096211}
 --- !u!4 &1822411535
 Transform:
   m_ObjectHideFlags: 0
@@ -34098,7 +34105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: portName
-      value: COM5
+      value: COM9
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: messageListener
@@ -34973,7 +34980,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125463167}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e144288812dd92e4ebf5772360bd6797, type: 3}
   m_Name: 
@@ -34981,7 +34988,7 @@ MonoBehaviour:
   rightImage: {fileID: 21300000, guid: d0a1dab897a4c5248baa0902063a2f6d, type: 3}
   wrongImage: {fileID: 21300000, guid: 3c711a4e3b9d9c34f92b3331ca202c25, type: 3}
   targetImage: {fileID: 2125463170}
-  PinText: {fileID: 0}
+  PinText: {fileID: 1989473243}
   stringy: 
 --- !u!114 &2125463170
 MonoBehaviour:
