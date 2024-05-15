@@ -19,7 +19,7 @@ public class ImageSwitcher : MonoBehaviour
         if (int.TryParse(PinText.text, out textValue))
         {
             // Check if the text value is 510 or below
-            if (textValue == 510)
+            if (textValue == 510 || textValue == 0)
             {
                 // Set the image to the right image
                 targetImage.sprite = wrongImage;

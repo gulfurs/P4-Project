@@ -86,7 +86,7 @@ public class Clicker : MonoBehaviour, IClickable
     }
 
     public void OnRightClick()
-{
+{/*
     BlockManager blockManager = FindObjectOfType<BlockManager>();
     Transform sC;
 
@@ -158,7 +158,7 @@ public class Clicker : MonoBehaviour, IClickable
             SetupButtons(blockSounds, changeButton, interfaceInstance, sC);
             ChangeBlockTexture(blockManager.partyPianoUV, blockManager.pianoSprite);
         }
-    }
+    }*/
 }
 
     void SetupButtons(List<AudioClip> blockSounds, GameObject changeButton, GameObject interfaceInstance, Transform soundContainer)
