@@ -62,22 +62,28 @@ void loop() {
   // Serial.print("Raw Sensor Value: ");
   //Serial.println(sensorValue);
 
-  Serial.print("Flex Sensor Voltage: ");
-  Serial.print(flexValue);
-  Serial.println(" V");
+  //Serial.print("Flex Sensor Voltage: ");
+  Serial.println(flexValue);
+  //Serial.println(sensorValue);
+  //Serial.println(pirPin);
+  //Serial.println(" V");
   // digitalWrite(motorPin3, 180);
 
-if (flexValue <= 350) {
+if (flexValue < 260 ) {
     Serial.print("po");
-    servo.write(100);
+    servo.write(90);
     digitalWrite(motorPin, HIGH);  // Activate motor
+    digitalWrite(motorPin11, LOW);
     delay(100);
-} else if (flexValue > 400 && flexValue < 420) {
-    servo2.write(110);
+} else if (flexValue <= 320 && flexValue > 260) {
+    servo2.write(100);
+    Serial.print("de");
     digitalWrite(motorPin11, HIGH);
+    digitalWrite(motorPin, LOW); 
     delay(100);
 } else {
     servo.write(0);
+    Serial.print("ca");
     digitalWrite(motorPin, LOW);  // Deactivate motor 1
     servo2.write(90);
     // få servo2 til at stoppe
@@ -98,7 +104,7 @@ if (flexValue <= 350) {
   }*/
 
 
-  if (sensorValue < 90) {
+  if (sensorValue < 230) {
     digitalWrite(ledPin, HIGH);
   } else {
     digitalWrite(ledPin, LOW);
