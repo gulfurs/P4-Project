@@ -19,7 +19,7 @@ public class ImageSwitcher : MonoBehaviour
         if (int.TryParse(PinText.text, out textValue))
         {
             // SHOW WRONGIMAGE IF TEXTVALUE IS DEFAULT VALUE
-            if (textValue == 510 || textValue == 0)
+            if (textValue == 510 || textValue == 0 || textValue == 511)
             {
                 //SET IMAGE TO WRONGE IMAGE
                 targetImage.sprite = wrongImage;

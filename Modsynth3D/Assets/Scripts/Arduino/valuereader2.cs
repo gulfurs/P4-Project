@@ -51,19 +51,19 @@ public class ValueReader4 : MonoBehaviour
                     // Assign and display the state based on specific value ranges
                     if (pinValue >= drumRangeLower && pinValue <= drumRangeUpper)
                     {
-                        currentPinState = targetState; // Drum
+                        currentPinState = targetState - 1; // Drum
                     }
                     else if (pinValue >= instrumentRangeLower && pinValue <= instrumentRangeUpper)
                     {
-                        currentPinState = targetState + 1; // Instrument
+                        currentPinState = targetState - 1 + 1; // Instrument
                     }
                     else if (pinValue >= partyDrumRangeLower && pinValue <= partyDrumRangeUpper)
                     {
-                        currentPinState = targetState + 2; // Party Drum
+                        currentPinState = targetState - 1 + 2; // Party Drum
                     }
-                    else if (pinValue >= partyInstrumentRangeLower && pinValue <= partyInstrumentRangeUpper)
+                    else if (pinValue >=    partyInstrumentRangeLower && pinValue <= partyInstrumentRangeUpper)
                     {
-                        currentPinState = targetState + 3; // Party Instrument
+                        currentPinState = targetState - 1 + 3; // Party Instrument
                     }
                     valueText.text = currentPinState.ToString();
                 }
